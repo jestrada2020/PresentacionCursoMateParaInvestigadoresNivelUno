@@ -57,7 +57,7 @@ John Jairo Estrada Alvarez
 * Fundamentos de Matemáticas
 * Cálculo I, Càlculo II, Cálculo III
 * Matemáticas I, Matemáticas II, Matemáticas III, Matemáticas IV
-* Matemáticas discretaas I, Matemáticas discretas II, Matemáticas discretas III
+* Matemáticas discretas I, Matemáticas discretas II, Matemáticas discretas III
 * Algebra lineal
 * Ecuaciones Diferenciales
 * Programación I
@@ -80,7 +80,7 @@ Juan Alberto Arias Quiceno
 * Fundamentos de Matemáticas
 * Cálculo I, Càlculo II, Cálculo III
 * Matemáticas I, Matemáticas II, Matemáticas III, Matemáticas IV
-* Matemáticas discretaas I, Matemáticas discretas II, Matemáticas discretas III
+* Matemáticas discretas I, Matemáticas discretas II, Matemáticas discretas III
 * Algebra lineal
 * Ecuaciones Diferenciales
 * Programación I
