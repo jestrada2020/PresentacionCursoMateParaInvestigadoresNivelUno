@@ -122,12 +122,16 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 
 ### **Capítulo 1**
 
+ **Tiempo de realización 2 horas 1 secciones**
+
 + Conceptos Introductorios
 
 
 
 ### **Capítulo 2**
-
+ 
+ **Tiempo de realización 8 horas 2 secciones**
+ 
 + Teoría de conjuntos.
 + Conjuntos numéricos.
 + Operaciones y propiedades de los números reales.
@@ -135,6 +139,8 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 + Potenciación y radicales.
 
 ### **Capítulo 3**
+
+**Tiempo de realización 12 horas 3 secciones**
 
 + Ecuaciones lineales y cuadráticas.
 + Regla de tres simple directa e inversa.
@@ -145,6 +151,8 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 
 ### **Capítulo 4**
 
+ **Tiempo de realización 2 horas 1 secciones**
+
 + Concepto de función.
 + Tipos de funciones.
 + Operaciones entre funciones.
@@ -152,6 +160,8 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 
 ### **Capítulo 5**
 
+ **Tiempo de realización 8 horas 2 secciones**
+ 
 + Concepto de límite.
 + Operaciones entre límites.
 + Límites trigonometricos.
@@ -160,6 +170,8 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 
 
 ### **Capítulo 6**
+ 
+ **Tiempo de realización 8 horas 4 secciones**
 
 + Talleres de evaluación.
 
