@@ -1,0 +1,227 @@
+---
+title: "Matemáticas para investigadores nivel Uno"
+author: "John Jairo Estrada Alvarez"
+date: "23 de noviembre de 2021"
+header-includes:
+  - \usepackage[utf8x]{inputenc}
+  - \usepackage{amsmath, amsfonts, amsthm, amssymb}
+  - \usepackage[fleqn]{amsmath}
+  - \usepackage[pdftex]{hyperref}
+  - \usepackage{color}
+    - \textcolor{red}{texto de color rojo}
+  - \hypersetup{colorlinks=true}
+output:
+  html_document:
+    theme: cosmo
+    toc: yes
+    toc_float: TRUE
+    highlight: tango
+csl: apa.csl
+bibliography: mi_biblio.bib
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+colFmt = function(x,color,outputFormat = 'html' ){
+  # Funcion para colorear texto a discrecion en Rmarkdown
+  # tomada de: https://stackoverflow.com/questions/29067541/how-to-change-the-font-color
+  
+  # outputFormat = knitr::opts_knit$get("rmarkdown.pandoc.to")
+  if(outputFormat == 'latex')
+    paste("\\textcolor{",color,"}{",x,"}",sep="")
+  else if(outputFormat == 'html')
+    paste("<font color='",color,"'>",x,"</font>",sep="")
+  else
+    x
+}
+```
+
+
+
+# Presentación del curso
+
+## Profesores del curso
+
+John Jairo Estrada Alvarez
+
+* Matemático UdeA 
+* Magister en Matemática Aplicadas Eafit (control y automatización)
+
+**Profesor de tiempo completo UCES**
+
+### Asignaturas  que ha dictado 
+* Algebra y trigonometría
+* Geometrìa Vectorial
+* Fundamentos de Matemáticas
+* Cálculo I, Càlculo II, Cálculo III
+* Matemáticas I, Matemáticas II, Matemáticas III, Matemáticas IV
+* Matemáticas discretaas I, Matemáticas discretas II, Matemáticas discretas III
+* Algebra lineal
+* Ecuaciones Difeenciales
+* Programación I
+* Análisis Numérico con aplicaciones
+* Control Automático I
+* Análisis de datos
+* Bioestadística
+
+
+Juan Alberto Arias Quiceno
+
+* Ingeniero de materiales UdeA 
+* Magister en Ciencias de la Educación UNAL
+
+**Profesor de tiempo completo UCES**
+
+### Asignaturas  que ha dictado
+* Algebra y trigonometría
+* Geometrìa Vectorial
+* Fundamentos de Matemáticas
+* Cálculo I, Càlculo II, Cálculo III
+* Matemáticas I, Matemáticas II, Matemáticas III, Matemáticas IV
+* Matemáticas discretaas I, Matemáticas discretas II, Matemáticas discretas III
+* Algebra lineal
+* Ecuaciones Difeenciales
+* Programación I
+* Análisis Numérico con aplicaciones
+* Control Automático I
+* Análisis de datos
+* Bioestadística
+
+
+
+# Matemáticas para investigadores nivel uno
+
+## Objetivo general
+
+Obtener competencias de las bases matemáticas para entender, aplicar y analizar el comportamiento de algunos fenómenos económicos, sociales y médicos, es decir, adquirir las nociones básicas de los fundamentos matemáticos y su relación con diferentes campos incluyendo el de la Salud.
+
+
+## Objetivos específicos 
+
+
+* Reconocer y entender las propiedades fundamentales de los operadores matemáticos.
+
+* Obtener destrezas básicas prácticas para la resolución de ecuaciones.
+
+* Desarrollar habilidades básicas para observar, aclarar y definir e implementar las propiedades trigonométricas.
+
+* Incorporar destrezas básicas para procesar, visualizar y analizar funciones.
+
+* Interiorizar e interpretar el concepto de cálculo, derivada y razón de cambio y su uso práctico.
+
+* Asimilar fundamentos del enfoque matemático y su aplicación en otros campos como el de la salud, y su relación estrecha con la generación de conocimiento. 
+
+* econocer comportamientos y/o modelos matemáticos inmersos en cualquier proceso administrativo o asistencial.
+
+
+
+## Contenido del curso
+
+
+### **Capítulo 1**
+
++ Teoría de conjuntos.
++ Conjuntos numéricos.
++ Operaciones y propiedades de los números reales.
++ Inecuaciones.
++ Potenciación y radicales.
+
+### **Capítulo 2**
+
++ Ecuaciones lineales y cuadráticas.
++ Regla de tres simple directa e inversa.
++ Regla de tres compuesta.
++ Ecuaciones polinomicas de grado mayor a dos.
++ Sistemas de ecuaciones lineales.
++ Sistema de ecuaciones no lineales.
+
+### **Capítulo 3**
+
++ Concepto de función.
++ Tipos de funciones.
++ Operaciones entre funciones.
+
+
+### **Capítulo 4**
+
++ Concepto de límite.
++ Operaciones entre límites.
++ Límites trigonometricos.
++ Concepto de continuidad
+
+
+
+### **Capítulo 6**
+
++ Talleres de evaluación.
+
+
+
+
+
+```{r echo=FALSE, message=F}
+library(calendR)
+# calendR()
+# calendR(year = 2020, month =8)
+calendR(year = 2021, month = 07,        # Año y mes
+        start = "M",                   # Empezar la semana en lunes
+        text = c("Inicio-Clases","Inicio-Clases","SIM-1P"),
+        text.pos = c(14,16,31),       # Días en los que poner los textos
+        text.size = 3.5,               # Tamaño de fuente de los textos
+        text.col = 1,
+        special.days = c(14,16,31),
+        special.col = rgb(0, 0, 1,  alpha = 0.25),)
+```
+
+
+
+
+
+```{r echo=FALSE, message=F}
+library(calendR)
+# calendR()
+# calendR(year = 2020, month =8)
+calendR(year = 2021, month = 08,        # Año y mes
+        start = "M",                   # Empezar la semana en lunes
+        text = c("SIM-1P","SIM-1P","Parcial-01"),
+        text.pos = c(1,2,6),       # Días en los que poner los textos
+        text.size = 3.5,               # Tamaño de fuente de los textos
+        text.col = 1,
+        special.days = c(1,2,6),
+        special.col = rgb(0, 0, 1,  alpha = 0.25),)
+```
+
+
+
+<!-- # ¿Qué es la estadística y Para qué sirve? -->
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/35HliJxmTxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+
+# Bibliografía
+
+* Samuels, M., Witmer, J., & Schaffner, A. (2012). Statistics for the life sciences (4 ed.).
+Boston: Pearson Education.
+
+* Milton, J. S. (2001). Estadística para la biología y ciencias de la salud (3 ed.). Madrid:
+McGraw- Hill/Interamericana.
+
+* Daniel, W. W. 2004. Bioestadística. Base para el análisis de las ciencias de la salud. 4era. Ed.
+Limusa Wiley Noriega Editores. México.
+
+
+* Johnson, R. A. & Bhattacharyya, G. K. (2010). Statistics. Principles and Methods (6 ed.). New
+York: John Wiley and Sons, Inc
+
+* Zar, J. (1999). Biostatistical analysis (5 ed.). Prentice hall Upper Saddle River, NJ.
+
+* Zuur, A., Ieno, E., & Meesters, E. (2009). A Beginner’s Guide to R. Springer. 
+
+* Uribe Calad Julio Alberto. Matemáticas básicas y operativas: primer semestre de universidad. Medellín [Colombia]: Ed. Susaeta1986. páginas:639
+
+* Silva, Luis Carlos. Cultura estadística e investigación científica en el campo de la salud: una mirada crítica. Editorial Díaz de Santos 1997.
+
+* Louis Leithod, El Cálculo, Ed Oxford University Press 1998, 7° edición
+
+* Zill D. Ecuaciones diferenciales con aplicaciones de modelado. International Thomson Editores. 6 Edición 
