@@ -59,7 +59,7 @@ John Jairo Estrada Alvarez
 * Matemáticas I, Matemáticas II, Matemáticas III, Matemáticas IV
 * Matemáticas discretaas I, Matemáticas discretas II, Matemáticas discretas III
 * Algebra lineal
-* Ecuaciones Difeenciales
+* Ecuaciones Diferenciales
 * Programación I
 * Análisis Numérico con aplicaciones
 * Control Automático I
@@ -82,12 +82,11 @@ Juan Alberto Arias Quiceno
 * Matemáticas I, Matemáticas II, Matemáticas III, Matemáticas IV
 * Matemáticas discretaas I, Matemáticas discretas II, Matemáticas discretas III
 * Algebra lineal
-* Ecuaciones Difeenciales
+* Ecuaciones Diferenciales
 * Programación I
-* Análisis Numérico con aplicaciones
-* Control Automático I
-* Análisis de datos
-* Bioestadística
+
+
+
 
 
 
@@ -124,6 +123,8 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 ### **Capítulo 1**
 
 + Conceptos Introductorios
+
+
 
 ### **Capítulo 2**
 
@@ -229,4 +230,5 @@ York: John Wiley and Sons, Inc
 
 * Louis Leithod, El Cálculo, Ed Oxford University Press 1998, 7° edición
 
-* Zill D. Ecuaciones diferenciales con aplicaciones de modelado. International Thomson Editores. 6 Edición 
+* Zill D. Ecuaciones diferenciales con aplicaciones de modelado. International Thomson Editores. 6 Edición
+
