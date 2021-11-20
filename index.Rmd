@@ -1,6 +1,6 @@
 ---
 title: "Matemáticas para investigadores nivel Uno"
-author: "John Jairo Estrada Alvarez"
+author: "Juan Alberto Arias Quiceno y John Jairo Estrada Alvarez"
 date: "23 de noviembre de 2021"
 header-includes:
   - \usepackage[utf8x]{inputenc}
