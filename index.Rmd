@@ -120,7 +120,12 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 ## Contenido del curso
 
 
+
 ### **Capítulo 1**
+
++ Conceptos Introductorios
+
+### **Capítulo 2**
 
 + Teoría de conjuntos.
 + Conjuntos numéricos.
@@ -128,7 +133,7 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 + Inecuaciones.
 + Potenciación y radicales.
 
-### **Capítulo 2**
+### **Capítulo 3**
 
 + Ecuaciones lineales y cuadráticas.
 + Regla de tres simple directa e inversa.
@@ -137,14 +142,14 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 + Sistemas de ecuaciones lineales.
 + Sistema de ecuaciones no lineales.
 
-### **Capítulo 3**
+### **Capítulo 4**
 
 + Concepto de función.
 + Tipos de funciones.
 + Operaciones entre funciones.
 
 
-### **Capítulo 4**
+### **Capítulo 5**
 
 + Concepto de límite.
 + Operaciones entre límites.
