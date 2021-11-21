@@ -138,6 +138,7 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 + Inecuaciones.
 + Potenciación y radicales.
 
+
 ### **Capítulo 3**
 
 **Tiempo de realización 12 horas 3 secciones**
