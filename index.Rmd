@@ -1,46 +1,22 @@
 ---
 title: "Matemáticas para investigadores nivel Uno"
-author: "Juan Alberto Arias Quiceno y John Jairo Estrada Alvarez"
-date: "23 de noviembre de 2021"
-header-includes:
-  - \usepackage[utf8x]{inputenc}
-  - \usepackage{amsmath, amsfonts, amsthm, amssymb}
-  - \usepackage[fleqn]{amsmath}
-  - \usepackage[pdftex]{hyperref}
-  - \usepackage{color}
-    - \textcolor{red}{texto de color rojo}
-  - \hypersetup{colorlinks=true}
-output:
-  html_document:
+output: 
+    learnr::tutorial:
     theme: cosmo
     toc: yes
     toc_float: TRUE
     highlight: tango
-csl: apa.csl
-bibliography: mi_biblio.bib
+runtime: shiny_prerendered
 ---
 
-
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-
-colFmt = function(x,color,outputFormat = 'html' ){
-  # Funcion para colorear texto a discrecion en Rmarkdown
-  # tomada de: https://stackoverflow.com/questions/29067541/how-to-change-the-font-color
-  
-  # outputFormat = knitr::opts_knit$get("rmarkdown.pandoc.to")
-  if(outputFormat == 'latex')
-    paste("\\textcolor{",color,"}{",x,"}",sep="")
-  else if(outputFormat == 'html')
-    paste("<font color='",color,"'>",x,"</font>",sep="")
-  else
-    x
-}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
 
-# Presentación del curso
+
 
 ## Profesores del curso
 
@@ -51,7 +27,8 @@ John Jairo Estrada Alvarez
 
 **Profesor de tiempo completo UCES**
 
-### Asignaturas  que ha dictado 
+**Asignaturas  que ha dictado**
+
 * Algebra y trigonometría
 * Geometrìa Vectorial
 * Fundamentos de Matemáticas
@@ -74,7 +51,8 @@ Juan Alberto Arias Quiceno
 
 **Profesor de tiempo completo UCES**
 
-### Asignaturas  que ha dictado
+**Asignaturas  que ha dictado**
+
 * Algebra y trigonometría
 * Geometrìa Vectorial
 * Fundamentos de Matemáticas
@@ -90,7 +68,7 @@ Juan Alberto Arias Quiceno
 
 
 
-# Matemáticas para investigadores nivel uno
+
 
 ## Objetivo general
 
@@ -116,11 +94,11 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 
 
 
-## Contenido del curso
+ Contenido del curso
 
 
 
-### **Capítulo 1**
+## **Capítulo 1**
 
  **Tiempo de realización 2 horas 1 secciones**
 
@@ -128,7 +106,7 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 
 
 
-### **Capítulo 2**
+## **Capítulo 2**
  
  **Tiempo de realización 8 horas 2 secciones**
  
@@ -139,7 +117,10 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 + Potenciación y radicales.
 
 
-### **Capítulo 3**
+
+
+
+## **Capítulo 3**
 
 **Tiempo de realización 12 horas 3 secciones**
 
@@ -150,7 +131,7 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 + Sistemas de ecuaciones lineales.
 + Sistema de ecuaciones no lineales.
 
-### **Capítulo 4**
+## **Capítulo 4**
 
  **Tiempo de realización 2 horas 1 secciones**
 
@@ -159,7 +140,7 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 + Operaciones entre funciones.
 
 
-### **Capítulo 5**
+## **Capítulo 5**
 
  **Tiempo de realización 8 horas 2 secciones**
  
@@ -170,7 +151,7 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 
 
 
-### **Capítulo 6**
+## **Capítulo 6**
  
  **Tiempo de realización 8 horas 4 secciones**
 
@@ -181,45 +162,23 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 
 
 
-```{r echo=FALSE, message=F}
-library(calendR)
-# calendR()
-# calendR(year = 2020, month =8)
-calendR(year = 2021, month = 07,        # Año y mes
-        start = "M",                   # Empezar la semana en lunes
-        text = c("Inicio-Clases","Inicio-Clases","SIM-1P"),
-        text.pos = c(14,16,31),       # Días en los que poner los textos
-        text.size = 3.5,               # Tamaño de fuente de los textos
-        text.col = 1,
-        special.days = c(14,16,31),
-        special.col = rgb(0, 0, 1,  alpha = 0.25),)
+### Ejemplo
+```{r letter-a, echo=FALSE}
+question("Sean \\(A\\) y \\(B\\) dos conjuntos no vacios.¿Qué operación no es entre conjuntos?",
+  answer("\\(A\\cap B\\)"),
+  answer("\\(A\\cup B\\)"),
+  answer("\\(1 + 2\\)", correct = TRUE),
+  answer("\\(A-B\\)"),
+  answer("\\(A+B\\)"),
+  random_answer_order = TRUE
+)
 ```
 
 
 
 
 
-```{r echo=FALSE, message=F}
-library(calendR)
-# calendR()
-# calendR(year = 2020, month =8)
-calendR(year = 2021, month = 08,        # Año y mes
-        start = "M",                   # Empezar la semana en lunes
-        text = c("SIM-1P","SIM-1P","Parcial-01"),
-        text.pos = c(1,2,6),       # Días en los que poner los textos
-        text.size = 3.5,               # Tamaño de fuente de los textos
-        text.col = 1,
-        special.days = c(1,2,6),
-        special.col = rgb(0, 0, 1,  alpha = 0.25),)
-```
-
-
-
-<!-- # ¿Qué es la estadística y Para qué sirve? -->
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/35HliJxmTxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
-
-# Bibliografía
+## Bibliografía
 
 * Samuels, M., Witmer, J., & Schaffner, A. (2012). Statistics for the life sciences (4 ed.).
 Boston: Pearson Education.
@@ -246,3 +205,65 @@ York: John Wiley and Sons, Inc
 
 * Zill D. Ecuaciones diferenciales con aplicaciones de modelado. International Thomson Editores. 6 Edición
 
+<!-- ## Operaciones -->
+<!-- ### Ejemplo  -->
+<!-- ```{r letter-a, echo=FALSE} -->
+<!-- question("Sean \\(A\\) y \\(B\\) dos conjuntos no vacios.¿Qué operación no es entre conjuntos?", -->
+<!--   answer("\\(A\\cap B\\)"), -->
+<!--   answer("\\(A\\cup B\\)"), -->
+<!--   answer("\\(1 + 2\\)", correct = TRUE), -->
+<!--   answer("\\(A-B\\)"), -->
+<!--   answer("\\(A+B\\)"), -->
+<!--   random_answer_order = TRUE -->
+<!-- ) -->
+<!-- ``` -->
+
+
+
+
+<!-- ```{r where-am-i, echo=FALSE} -->
+<!-- question("Cuales operaciones se pueden realizar entre conjuntos?", -->
+<!--   answer("Unión", correct = TRUE), -->
+<!--   answer("Complemento", correct = TRUE), -->
+<!--   answer("Intersección", correct = TRUE), -->
+<!--   answer("Diferencia", correct = TRUE), -->
+<!--   incorrect = "Usted no realizó bien la selección.", -->
+<!--   random_answer_order = TRUE, -->
+<!--   allow_retry = TRUE) -->
+<!-- ``` -->
+
+
+<!-- ```{r letter-a2, echo=FALSE} -->
+<!-- question("What number is the letter A in the English alphabet?", -->
+<!--   answer("8"), -->
+<!--   answer("14"), -->
+<!--   answer("1", correct = TRUE), -->
+<!--   answer("23"), -->
+<!--   random_answer_order = TRUE -->
+<!-- ) -->
+<!-- ``` -->
+
+
+
+<!-- ## Topic 2 -->
+
+
+<!-- ### Quiz -->
+
+<!-- ```{r quiz1, echo=FALSE} -->
+<!-- quiz(caption = " ", -->
+<!--   question("What number is the letter A in the *English* alphabet?", -->
+<!--     answer("8"), -->
+<!--     answer("14"), -->
+<!--     answer("1", correct = TRUE), -->
+<!--     answer("23") -->
+<!--   ), -->
+<!--   question("Where are you right now? (select ALL that apply)", -->
+<!--     answer("Planet Earth", correct = TRUE), -->
+<!--     answer("Pluto"), -->
+<!--     answer("At a computing device", correct = TRUE), -->
+<!--     answer("In the Milky Way", correct = TRUE), -->
+<!--     incorrect = "Incorrect. You're on Earth, in the Milky Way, at a computer." -->
+<!--   ) -->
+<!-- ) -->
+<!-- ``` -->
