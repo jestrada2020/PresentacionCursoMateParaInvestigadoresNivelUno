@@ -18,6 +18,7 @@ output:
     highlight: tango
 csl: apa.csl
 bibliography: mi_biblio.bib
+runtime: shiny_prerendered
 ---
 
 
@@ -181,36 +182,51 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 
 
 
-```{r echo=FALSE, message=F}
-library(calendR)
-# calendR()
-# calendR(year = 2020, month =8)
-calendR(year = 2021, month = 07,        # Año y mes
-        start = "M",                   # Empezar la semana en lunes
-        text = c("Inicio-Clases","Inicio-Clases","SIM-1P"),
-        text.pos = c(14,16,31),       # Días en los que poner los textos
-        text.size = 3.5,               # Tamaño de fuente de los textos
-        text.col = 1,
-        special.days = c(14,16,31),
-        special.col = rgb(0, 0, 1,  alpha = 0.25),)
-```
+<!-- ```{r echo=FALSE, message=F} -->
+<!-- library(calendR) -->
+<!-- # calendR() -->
+<!-- # calendR(year = 2020, month =8) -->
+<!-- calendR(year = 2021, month = 07,        # Año y mes -->
+<!--         start = "M",                   # Empezar la semana en lunes -->
+<!--         text = c("Inicio-Clases","Inicio-Clases","SIM-1P"), -->
+<!--         text.pos = c(14,16,31),       # Días en los que poner los textos -->
+<!--         text.size = 3.5,               # Tamaño de fuente de los textos -->
+<!--         text.col = 1, -->
+<!--         special.days = c(14,16,31), -->
+<!--         special.col = rgb(0, 0, 1,  alpha = 0.25),) -->
+<!-- ``` -->
 
 
 
 
 
-```{r echo=FALSE, message=F}
-library(calendR)
-# calendR()
-# calendR(year = 2020, month =8)
-calendR(year = 2021, month = 08,        # Año y mes
-        start = "M",                   # Empezar la semana en lunes
-        text = c("SIM-1P","SIM-1P","Parcial-01"),
-        text.pos = c(1,2,6),       # Días en los que poner los textos
-        text.size = 3.5,               # Tamaño de fuente de los textos
-        text.col = 1,
-        special.days = c(1,2,6),
-        special.col = rgb(0, 0, 1,  alpha = 0.25),)
+<!-- ```{r echo=FALSE, message=F} -->
+<!-- library(calendR) -->
+<!-- # calendR() -->
+<!-- # calendR(year = 2020, month =8) -->
+<!-- calendR(year = 2021, month = 08,        # Año y mes -->
+<!--         start = "M",                   # Empezar la semana en lunes -->
+<!--         text = c("SIM-1P","SIM-1P","Parcial-01"), -->
+<!--         text.pos = c(1,2,6),       # Días en los que poner los textos -->
+<!--         text.size = 3.5,               # Tamaño de fuente de los textos -->
+<!--         text.col = 1, -->
+<!--         special.days = c(1,2,6), -->
+<!--         special.col = rgb(0, 0, 1,  alpha = 0.25),) -->
+<!-- ``` -->
+
+
+
+### Ejemplo
+```{r letter-a, echo=FALSE}
+library(learnr)
+question("Sean \\(A\\) y \\(B\\) dos conjuntos no vacios.¿Qué operación no es entre conjuntos?",
+  answer("\\(A\\cap B\\)"),
+  answer("\\(A\\cup B\\)"),
+  answer("\\(1 + 2\\)", correct = TRUE),
+  answer("\\(A-B\\)"),
+  answer("\\(A+B\\)"),
+  random_answer_order = TRUE
+)
 ```
 
 
