@@ -23,6 +23,9 @@ runtime: shiny_prerendered
 
 
 ```{r setup, include=FALSE}
+library(sortable)
+library(magrittr)
+library(VennDiagram)
 knitr::opts_chunk$set(echo = TRUE)
 
 colFmt = function(x,color,outputFormat = 'html' ){
@@ -214,18 +217,145 @@ Obtener competencias de las bases matemáticas para entender, aplicar y analizar
 <!--         special.col = rgb(0, 0, 1,  alpha = 0.25),) -->
 <!-- ``` -->
 
+# **Ejemplos talleres evaluativos**
 
-
-### Ejemplo
-```{r letter-a, echo=FALSE}
+### Ejemplo1
+```{r letter-a1, echo=FALSE}
 library(learnr)
-question("Sean \\(A\\) y \\(B\\) dos conjuntos no vacios.¿Qué operación no es entre conjuntos?",
+question("Sean \\(A\\) y \\(B\\) dos conjuntos no vacios.¿Qué operación no se puede realizar entre conjuntos?",
   answer("\\(A\\cap B\\)"),
   answer("\\(A\\cup B\\)"),
   answer("\\(1 + 2\\)", correct = TRUE),
   answer("\\(A-B\\)"),
+  answer("\\(A+B\\)", correct = TRUE),
+  random_answer_order = TRUE,
+  allow_retry = TRUE,
+  submit_button = "Enviar Respuesta",
+              incorrect = "Incorrecto",
+              correct = "Correcto!",
+              try_again_button = "Intentelo nuevamente"
+)
+```
+
+
+### Ejemplo2
+```{r letter-a2, echo=FALSE}
+library(learnr)
+question("Sean \\(A\\), \\(B\\), y \\(C\\)  tres conjuntos no vacios.¿Qué conjunto es el más pequeño entre operaciones de conjuntos?",
+  answer("\\(A\\cap B \\cap C\\)", correct = TRUE),
+  answer("\\(A\\cup B\\)"),
+  answer("\\(1 + 2\\)"),
+  answer("\\(A-B\\)"),
   answer("\\(A+B\\)"),
-  random_answer_order = TRUE
+  random_answer_order = TRUE,
+  allow_retry = TRUE,
+  submit_button = "Enviar Respuesta",
+              incorrect = "Incorrecto",
+              correct = "Correcto!",
+              try_again_button = "Intentelo nuevamente"
+)
+```
+
+
+
+
+### Ejemplo3
+```{r conjunto1, echo=FALSE,fig.cap="Figura 1",fig.align="center"}
+
+venn.plot <- draw.pairwise.venn(60, 50, 13,
+                                c("A", "B"),
+                                fill = c("green", "blue"))
+grid.draw(venn.plot)
+```
+
+
+```{r PreguntaSM1, echo=FALSE}
+# quiz(caption = "Quiz 2",
+     
+      question("Usando el diagrama de la Figura 1. Seleccione sólo las afirmaciones correctas :",
+              answer(sprintf("El cardinal de $A=%d$",60),correct = TRUE),
+              answer(sprintf("El cardinal de $B=%d$",50),correct = TRUE),
+              answer(sprintf("El cardinal de $B-A^{c}=%d$",17)),
+              answer(sprintf("El cardinal de $A-B=%d$",27)),
+              answer(sprintf("El cardinal de $B^{c} - A=%d$",13)),
+              answer(sprintf("El cardinal de $B-A=%d$",37),correct = TRUE),
+              answer("El cardinal de la intersección $$\\text{Card}(A \\cap B)= 1$$"),
+              answer("El cardinal de la unión $$\\text{Card}(A \\cup B)= 11$$"),
+              answer("El cardinal de la unión $$\\text{Card}(A \\cup B \\cup C)= 121$$"),
+              answer("El cardinal de la intersección $$\\text{Card}(A \\cap B \\cap C)= 21$$"),
+              random_answer_order = TRUE,
+              allow_retry = TRUE,
+              submit_button = "Enviar Respuesta",
+              incorrect = "Incorrecto",
+              correct = "Correcto!",
+              try_again_button = "Intentelo nuevamente")
+# )
+```
+
+
+### Ejemplo3
+
+```{r Pregunta3, echo=FALSE}
+question("Seleccione sólo las afirmaciones verdaderas",
+         answer("2>-1", correct = TRUE),
+         answer("-3.5>0"),
+         answer("2>-10", correct = TRUE),
+         answer("5>0.7", correct = TRUE),
+         random_answer_order = TRUE,
+         allow_retry = TRUE,
+         submit_button = "Enviar Respuesta",
+         incorrect = "Incorrecto",
+         correct = "Correcto!",
+         try_again_button = "Intentelo nuevamente")
+```
+
+
+### Ejemplo4
+
+```{r Pregunta6, echo=FALSE}
+x <- -5
+question(sprintf("Suponga que $x = %s$. Seleccione sólo las afirmaciones correctas :", x),
+              answer("$x$ es un número positivo"),
+              answer("$x$ es un número entero negativo", correct = TRUE),
+              answer("$x$ es un número racional", correct = TRUE),
+              answer("$x$ es un número natural"),
+              answer("$x$ es un número real no positivo", correct = TRUE),
+              random_answer_order = TRUE,
+              allow_retry = TRUE,
+              submit_button = "Enviar Respuesta",
+              incorrect = "Incorrecto",
+              correct = "Correcto!",
+              try_again_button = "Intentelo nuevamente")
+```
+
+
+### Ejemplo5
+
+```{r Pregunta9, echo=FALSE}
+domesticos <- c(
+    "-33",
+    "-10",
+    "-1/2",
+    "-0.11",
+    "0.03",
+    "2",
+    "10",
+    "25",
+    "33"
+  )
+# Initialize the question
+question_rank(
+  "Ordene de menor a mayor cada uno de los números:",
+  answer(domesticos, correct = TRUE),
+  answer(rev(domesticos), correct = FALSE,
+         message = "Usted ordeno mal!"
+         ),
+   random_answer_order = TRUE,
+  allow_retry = TRUE,
+  submit_button = "Enviar Respuesta",
+  incorrect = "Incorrecto",
+  correct = "Correcto!",
+  try_again_button = "Intentelo nuevamente"
 )
 ```
 
